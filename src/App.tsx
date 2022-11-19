@@ -8,6 +8,7 @@ import {
   Box,
   Grid,
   Fab,
+  styled,
 } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import TopSearchBox from "./TopSearchBox";
@@ -38,6 +39,10 @@ const listItems = Data.items.map((item, index) => (
   </div>
 ));
 
+const Input = styled('input')({
+  display: 'none',
+});
+
 function App() {
   return (
     <Container>
@@ -51,9 +56,14 @@ function App() {
           bottom: 30,
           right: 30,
         }}>
-        <AddIcon />
+        <label htmlFor="contained-button-file">
+          <Input accept="image/*" id="contained-button-file" multiple type="file" />
+          <AddIcon
+            fontSize="large"
+          />
+        </label>
       </Fab>
-    </Container>
+    </Container >
   );
 }
 

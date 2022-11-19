@@ -6,16 +6,27 @@ import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
+  // Route,
 } from "react-router-dom";
 import ErrorPage from './ErrorPage';
+import Camera from './Camera'
+import AddObject from './AddObject';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+  },{
+    path: "/camera",
+    element: <Camera />,
+    errorElement: <ErrorPage />,
   },
+  {
+    path: "/add-object",
+    element: <AddObject />,
+    errorElement: <ErrorPage />,
+  }
 ]);
 
 const root = ReactDOM.createRoot(
