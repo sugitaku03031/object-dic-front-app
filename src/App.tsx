@@ -7,9 +7,9 @@ import {
   Container,
   Box,
   Grid,
-  Button,
+  Fab,
 } from "@mui/material";
-import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
+import AddIcon from '@mui/icons-material/Add';
 import TopSearchBox from "./TopSearchBox";
 import Data from "./sample.json";
 
@@ -43,26 +43,16 @@ function App() {
     <Container>
       <TopSearchBox />
       <List>{listItems}</List>
-      <Button
+      <Fab
+        color="secondary"
+        aria-label="add"
         style={{
-          // borderRadius: 50,
-          // minWidth: 50,
-          // width: 50,
-          // height: 50,
           position: "fixed",
           bottom: 30,
           right: 30,
-        }}
-        className="z-depth-1 p-2 d-flex justify-content-center align-items-center"
-      // onClick={async () => {
-      //   router.push("./create");
-      // }}
-      >
-        <AddCircleOutlineOutlinedIcon 
-          style={{ fontSize: 28 }}
-          className="text-primary"
-          color="primary" />
-      </Button>
+        }}>
+        <AddIcon />
+      </Fab>
     </Container>
   );
 }
