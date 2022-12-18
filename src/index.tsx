@@ -11,6 +11,8 @@ import {
 import ErrorPage from './ErrorPage';
 import Camera from './Camera'
 import AddObject from './AddObject';
+import SearchRireki from './SearchRireki';
+import SearchResult from './SearchResult';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,16 @@ const router = createBrowserRouter([
   {
     path: "/add-object",
     element: <AddObject />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/search-rireki",
+    element: <SearchRireki />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/search-result",
+    element: <SearchResult />,
     errorElement: <ErrorPage />,
   }
 ]);
