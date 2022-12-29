@@ -11,6 +11,8 @@ import {
 import ErrorPage from './ErrorPage';
 import Camera from './Camera'
 import AddObject from './AddObject';
+import EditObject from './EditObject';
+import ShowObject from './ShowObject';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +28,17 @@ const router = createBrowserRouter([
     path: "/add-object",
     element: <AddObject />,
     errorElement: <ErrorPage />,
-  }
+  },
+  {
+    path: "/edit-object",
+    element: <EditObject />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/show-object",
+    element: <ShowObject />,
+    errorElement: <ErrorPage />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(
