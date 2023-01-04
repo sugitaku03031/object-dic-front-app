@@ -28,7 +28,7 @@ function EditObject() {
                             <ArrowBackIcon />
                         </IconButton>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            あいうえおあああああ
+                            編集
                         </Typography>
                     </Toolbar>
                 </AppBar>
